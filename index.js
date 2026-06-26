@@ -19,7 +19,7 @@ app.all('/proxy', async (req, res) => {
     const targetUrl = req.query.url;
 
     if (!targetUrl) {
-        return res.status(400).send('Missing url parameter');
+        return res.status(400).send('url b da');
     }
 
     try {
@@ -46,7 +46,5 @@ app.all('/proxy', async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Proxy running on port ${PORT}`);
-});
+const PORT = 3000;
+app.listen(PORT);
